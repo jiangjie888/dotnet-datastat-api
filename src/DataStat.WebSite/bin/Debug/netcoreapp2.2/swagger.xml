@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataStat.WebCore</name>
+    </assembly>
+    <members>
+        <member name="M:DataStat.WebCore.Controllers.TestController.FirstTest">
+            <summary>
+            第一个测试样例
+            </summary>
+        </member>
+    </members>
+</doc>

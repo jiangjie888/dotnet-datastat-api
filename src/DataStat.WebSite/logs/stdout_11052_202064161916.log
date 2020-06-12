@@ -1,0 +1,20 @@
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[58]
+      Creating key {4ad578f3-2280-463c-9f73-e703d11d64db} with creation date 2020-06-04 16:19:19Z, activation date 2020-06-04 16:19:19Z, and expiration date 2020-09-02 16:19:19Z.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {4ad578f3-2280-463c-9f73-e703d11d64db} may be persisted to storage in unencrypted form.
+Hosting environment: Development
+Content root path: E:\gitcode\senlin\datastat-api\src\DataStat.WebSite
+Now listening on: http://127.0.0.1:37956
+Application started. Press Ctrl+C to shut down.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://localhost/DataStat  
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 DEBUG http://localhost/DataStat  0
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 111.5205ms 200 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 451.6587ms 302 

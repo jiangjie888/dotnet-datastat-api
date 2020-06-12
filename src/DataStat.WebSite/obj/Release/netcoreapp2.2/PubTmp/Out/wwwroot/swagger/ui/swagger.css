@@ -1,0 +1,38 @@
+﻿ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.leftMenu {
+    height: calc(100vh - 20px);
+    width: 200px;
+    float: left;
+    border: 1px solid #f4f4f4;
+    background: #fff;
+    position: fixed;
+    top: 1px;
+    overflow: scroll;
+    background-color: #54a0de;
+    color: #FFF;
+    text-align: left;
+    display: none;
+}
+
+.leftMenu li a {
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    display: block;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.leftMenu li.active a {
+    text-align:left;
+    background: #f60;
+    color: #fff;
+}
+

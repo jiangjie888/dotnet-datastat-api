@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataStat.WebCore</name>
+    </assembly>
+    <members>
+        <member name="T:DataStat.WebCore.CommonSuport.AuditingLogs.LogMiddleware">
+            <summary>
+            日志中间件
+            </summary>
+        </member>
+        <member name="F:DataStat.WebCore.CommonSuport.AuditingLogs.LogMiddleware._next">
+            <summary>
+            管道代理对象
+            </summary>
+        </member>
+        <member name="T:DataStat.WebCore.CommonSuport.AuditingLogs.LogMiddlewareExtensions">
+            <summary>
+            这是扩展中间件
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.CommonSuport.AuditingLogs.LogMiddlewareExtensions.UseLogLogMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            调用日志中间件
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataStat.WebCore.CommonSuport.Authentication.IdentityService">
+            <summary>
+            当前登录用户信息
+            </summary>
+        </member>
+        <member name="T:DataStat.WebCore.CommonSuport.Authentication.IIdentityService">
+            <summary>
+            获取当前登录用户信息
+            </summary>
+        </member>
+        <member name="T:DataStat.WebCore.CommonSuport.Authentication.JwtBearer.PermissionMiddleware">
+            <summary>
+            权限中间件
+            </summary>
+        </member>
+        <member name="F:DataStat.WebCore.CommonSuport.Authentication.JwtBearer.PermissionMiddleware._next">
+            <summary>
+            管道代理对象
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.CommonSuport.Authentication.JwtBearer.PermissionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            权限中间件构造
+            </summary>
+            <param name="next">管道代理对象</param>
+            <param name="permissionResitory">权限仓储对象</param>
+            <param name="option">权限中间件配置选项</param>
+        </member>
+        <member name="M:DataStat.WebCore.CommonSuport.Authentication.JwtBearer.PermissionMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            调用管道
+            </summary>
+            <param name="context">请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="T:DataStat.WebCore.CommonSuport.Authorization.AuthorizeFilterAttribute">
+            <summary>
+            权限过滤器
+            </summary>
+        </member>
+        <member name="T:DataStat.WebCore.CommonSuport.Filter.ExceptionFilter">
+            <summary>
+            拦截Action的异常，输出Json给EXT捕获(目前loaddata类操作在JS中暂时没有处理)  ExceptionFilter
+            </summary>
+        </member>
+        <member name="P:DataStat.WebCore.CommonSuport.Filter.LogFilter._requestBody">
+            <summary>
+            请求体中的所有值
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.CommonSuport.Filter.LogFilter.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)">
+            <summary>
+            执行器
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataStat.WebCore.CommonSuport.ViewModel.ExtGrid`1">
+            <summary>
+            表格返回
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:DataStat.WebCore.Common.Common.GetPrivateProperty``1(System.Object,System.String)">
+            <summary>
+            获取私有成员
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance">实例对像</param>
+            <param name="propertyname">成员名</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.Common.GetProperty``1(System.Object,System.String)">
+            <summary>
+            获取所有成员
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance">实例对像</param>
+            <param name="propertyname">成员名</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.Common.SetProperty(System.Object,System.String,System.String)">
+            <summary>
+            设置成员值
+            </summary>
+            <param name="instance"></param>
+            <param name="propertyname"></param>
+            <param name="propertyvalue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.Common.GetPropertys">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.Common.MD5String(System.String,System.String)">
+            <summary>
+            加密 create by jjie
+            </summary>
+            <param name="strOr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.Common.DecodeBase64(System.String,System.String)">
+            <summary>
+            加密 create by jjie
+            </summary>
+            <param name="strOr"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DataStat.WebCore.Common.Dto.RkeyInput.Rkey">
+            <summary>
+            主表行主键
+            </summary>
+        </member>
+        <member name="P:DataStat.WebCore.Common.Dto.RkeyInput.RkeyDet">
+            <summary>
+            子表行主键
+            </summary>
+        </member>
+        <member name="P:DataStat.WebCore.Common.Dto.RkeyInput.GridId">
+            <summary>
+            网格Id
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.#ctor(System.String,System.String,System.String,System.String)">
+            <summary> 
+            连接FTP 
+            </summary> 
+            <param name="FtpServerIP">FTP连接地址</param> 
+            <param name="FtpRemotePath">指定FTP连接成功后的当前目录, 如果不指定即默认为根目录</param> 
+            <param name="FtpUserID">用户名</param> 
+            <param name="FtpPassword">密码</param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.Upload(System.String)">
+            <summary> 
+            上传 
+            </summary> 
+            <param name="filename"></param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.Download(System.String,System.String)">
+            <summary> 
+            下载 
+            </summary> 
+            <param name="filePath"></param> 
+            <param name="fileName"></param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.GetFileByte(System.String)">
+            <summary>
+            根据路径获取附件数据流
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.Delete(System.String)">
+            <summary> 
+            删除文件 
+            </summary> 
+            <param name="fileName"></param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.RemoveDirectory(System.String)">
+            <summary> 
+            删除文件夹 
+            </summary> 
+            <param name="folderName"></param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.GetFilesDetailList">
+            <summary> 
+            获取当前目录下明细(包含文件和文件夹) 
+            </summary> 
+            <returns></returns> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.GetFileList(System.String)">
+            <summary> 
+            获取当前目录下文件列表(仅文件) 
+            </summary> 
+            <returns></returns> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.GetDirectoryList">
+            <summary> 
+            获取当前目录下所有的文件夹列表(仅文件夹) 
+            </summary> 
+            <returns></returns> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.DirectoryExist(System.String)">
+            <summary> 
+            判断当前目录下指定的子目录是否存在 
+            </summary> 
+            <param name="RemoteDirectoryName">指定的目录名</param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.FileExist(System.String)">
+            <summary> 
+            判断当前目录下指定的文件是否存在 
+            </summary> 
+            <param name="RemoteFileName">远程文件名</param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.MakeDir(System.String)">
+            <summary> 
+            创建文件夹 
+            </summary> 
+            <param name="dirName"></param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.GetFileSize(System.String)">
+            <summary> 
+            获取指定文件大小 
+            </summary> 
+            <param name="filename"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.ReName(System.String,System.String)">
+            <summary> 
+            改名 
+            </summary> 
+            <param name="currentFilename"></param> 
+            <param name="newFilename"></param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.MovieFile(System.String,System.String)">
+            <summary> 
+            移动文件 
+            </summary> 
+            <param name="currentFilename"></param> 
+            <param name="newFilename"></param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.GotoDirectory(System.String,System.Boolean)">
+            <summary> 
+            切换当前目录 
+            </summary> 
+            <param name="DirectoryName"></param> 
+            <param name="IsRoot">true 绝对路径   false 相对路径</param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.FtpWeb.DeleteOrderDirectory(System.String,System.String,System.String,System.String)">
+            <summary> 
+            删除订单目录 
+            </summary> 
+            <param name="ftpServerIP">FTP 主机地址</param> 
+            <param name="folderToDelete">FTP 用户名</param> 
+            <param name="ftpUserID">FTP 用户名</param> 
+            <param name="ftpPassword">FTP 密码</param> 
+        </member>
+        <member name="M:DataStat.WebCore.Common.HTTPClientHelper.#ctor(System.Net.Http.IHttpClientFactory)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.Common.HTTPClientHelper.GetToken">
+            <summary>
+            获取token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataStat.WebCore.Common.HttpContext">
+            <summary>
+            获取HttpContext
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.IsAssignableToGenericType(System.Type,System.Type)">
+            <summary>
+            Checks whether <paramref name="givenType"/> implements/inherits <paramref name="genericType"/>.
+            </summary>
+            <param name="givenType">Type to check</param>
+            <param name="genericType">Generic type</param>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetAttributesOfMemberAndDeclaringType(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            Gets a list of attributes defined for a class member and it's declaring type including inherited attributes.
+            </summary>
+            <param name="inherit">Inherit attribute from base classes</param>
+            <param name="memberInfo">MemberInfo</param>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetAttributesOfMemberAndType(System.Reflection.MemberInfo,System.Type,System.Boolean)">
+            <summary>
+            Gets a list of attributes defined for a class member and type including inherited attributes.
+            </summary>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="type">Type</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetAttributesOfMemberAndDeclaringType``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            Gets a list of attributes defined for a class member and it's declaring type including inherited attributes.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetAttributesOfMemberAndType``1(System.Reflection.MemberInfo,System.Type,System.Boolean)">
+            <summary>
+            Gets a list of attributes defined for a class member and type including inherited attributes.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="type">Type</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetSingleAttributeOfMemberOrDeclaringTypeOrDefault``1(System.Reflection.MemberInfo,``0,System.Boolean)">
+            <summary>
+            Tries to gets an of attribute defined for a class member and it's declaring type including inherited attributes.
+            Returns default value if it's not declared at all.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="defaultValue">Default value (null as default)</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetSingleAttributeOrDefault``1(System.Reflection.MemberInfo,``0,System.Boolean)">
+            <summary>
+            Tries to gets an of attribute defined for a class member and it's declaring type including inherited attributes.
+            Returns default value if it's not declared at all.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="defaultValue">Default value (null as default)</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetPropertyByPath(System.Object,System.Type,System.String)">
+            <summary>
+            Gets a property by it's full path from given object
+            </summary>
+            <param name="obj">Object to get value from</param>
+            <param name="objectType">Type of given object</param>
+            <param name="propertyPath">Full path of property</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.GetValueByPath(System.Object,System.Type,System.String)">
+            <summary>
+            Gets value of a property by it's full path from given object
+            </summary>
+            <param name="obj">Object to get value from</param>
+            <param name="objectType">Type of given object</param>
+            <param name="propertyPath">Full path of property</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Common.ReflectionHelper.SetValueByPath(System.Object,System.Type,System.String,System.Object)">
+            <summary>
+            Sets value of a property by it's full path on given object
+            </summary>
+            <param name="obj"></param>
+            <param name="objectType"></param>
+            <param name="propertyPath"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:DataStat.WebCore.Controllers.BigData.BigDataController">
+            <summary>
+            大数据平台
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.BigData.BigDataController.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,DataStat.WebCore.CommonSuport.Authentication.IIdentityService)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:DataStat.WebCore.Controllers.TestController">
+            <summary>
+            测试控制器
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,DataStat.WebCore.CommonSuport.Authentication.IIdentityService,DataStat.FrameWork.Repository.IRepository{DataStat.FrameWork.DomainModel.AuditLogs.AuditLog,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.TestException(System.String)">
+            <summary>
+            测试异常
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.FirstTest(System.String)">
+            <summary>
+            第一个测试样例
+            </summary>
+            <param name="v">参数1</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.FirstTest1">
+            <summary>
+            分页返回
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.FirstTest2(System.String)">
+            <summary>
+            直接返回DataTable
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.FirstTest3(System.String)">
+            <summary>
+            测试无返回值
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.DbConnectionFirstTest(System.Int32,System.String)">
+            <summary>
+            第一个测试连接数据库 
+            </summary> DBNull.Value;
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.TestRepositoryGetAsync">
+            <summary>
+            测试数据库仓储GetAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.TestRepositoryGetAllAsync">
+            <summary>
+            测试数据库仓储GetAllAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.TestRepositoryQueryAllbyPage(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.List{DataStat.FrameWork.DomainModel.DataFilter})">
+            <summary>
+            测试数据库仓储QueryAllbyPage
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.TestRepositoryInsertAsync">
+            <summary>
+            测试数据库仓储InsertAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataStat.WebCore.Controllers.TestController.FirstTestAuth(System.String)">
+            <summary>
+            第一个测试Token认证
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataStat.WebCore.Controllers.WebAppControllerBase">
+            <summary>
+            基控制器
+            </summary>
+        </member>
+        <member name="T:DataStat.WebCore.Models.SysUser">
+            <summary>
+            
+            </summary>
+            
+        </member>
+        <member name="T:DataStat.WebCore.Models.SysUsertrack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApiResultFilter.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:WebSite.MVC.CommonSuport.ViewModel.ExtResult`1">
+            <summary>
+            EXT提交后台后的返回类型
+            </summary>
+        </member>
+        <member name="P:WebSite.MVC.CommonSuport.ViewModel.ExtResult`1.Success">
+            <summary>
+            标注成功或失败
+            </summary>
+        </member>
+        <member name="P:WebSite.MVC.CommonSuport.ViewModel.ExtResult`1.Error">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:WebSite.MVC.CommonSuport.ViewModel.ExtResult`1.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:WebSite.MVC.CommonSuport.ViewModel.ExtResult`1.UnAuthorizedRequest">
+            <summary>
+            标注是否认证
+            </summary>
+        </member>
+        <member name="P:WebSite.MVC.CommonSuport.ViewModel.ExtResult`1.__abp">
+            <summary>
+            标识是否ABP
+            </summary>
+        </member>
+    </members>
+</doc>

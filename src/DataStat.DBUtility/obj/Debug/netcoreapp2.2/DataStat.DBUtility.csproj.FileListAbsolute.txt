@@ -1,0 +1,15 @@
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\bin\Debug\netcoreapp2.2\DataStat.DBUtility.deps.json
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\bin\Debug\netcoreapp2.2\DataStat.DBUtility.dll
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\bin\Debug\netcoreapp2.2\DataStat.DBUtility.pdb
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.csproj.CoreCompileInputs.cache
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.AssemblyInfoInputs.cache
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.AssemblyInfo.cs
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.dll
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.pdb
+E:\gitcode\zongzhi\datastat-api\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.csprojAssemblyReference.cache
+E:\gitcode\zongzhi\datastat-api\src\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.csprojAssemblyReference.cache
+E:\gitcode\zongzhi\datastat-api\src\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.csproj.CoreCompileInputs.cache
+E:\gitcode\zongzhi\datastat-api\src\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.AssemblyInfoInputs.cache
+E:\gitcode\zongzhi\datastat-api\src\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.AssemblyInfo.cs
+E:\gitcode\zongzhi\datastat-api\src\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.dll
+E:\gitcode\zongzhi\datastat-api\src\DataStat.DBUtility\obj\Debug\netcoreapp2.2\DataStat.DBUtility.pdb

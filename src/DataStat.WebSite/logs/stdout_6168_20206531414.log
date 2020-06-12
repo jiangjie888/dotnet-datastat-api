@@ -1,0 +1,35 @@
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[58]
+      Creating key {913fdea1-e259-4acb-80cc-caeefd4e99bc} with creation date 2020-06-05 03:14:14Z, activation date 2020-06-05 03:14:14Z, and expiration date 2020-09-03 03:14:14Z.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {913fdea1-e259-4acb-80cc-caeefd4e99bc} may be persisted to storage in unencrypted form.
+Hosting environment: Development
+Content root path: E:\gitcode\senlin\datastat-api\src\DataStat.WebSite
+Now listening on: http://127.0.0.1:47847
+Application started. Press Ctrl+C to shut down.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://localhost/DataStat/index.html  
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 439.9152ms 200 text/html;charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://localhost/DataStat/swagger/??????-??????????/swagger.json  
+fail: Microsoft.AspNetCore.Server.Kestrel[13]
+      Connection id "0HM08VQ3HTTLG", Request id "0HM08VQ3HTTLG:00000002": An unhandled exception was thrown by the application.
+System.NotSupportedException: Ambiguous HTTP method for action - DataStat.WebCore.Controllers.HomeControlle.Index (DataStat.WebCore). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at DataStat.WebCore.CommonSuport.Authentication.JwtBearer.JwtTokenMiddleware.<>c.<<UseJwtTokenMiddleware>b__0_0>d.MoveNext() in E:\gitcode\senlin\datastat-api\src\DataStat.WebCore\CommonSuport\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.UsePathBaseMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 249.9282ms 500 
